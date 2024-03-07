@@ -1,0 +1,15 @@
+[package]
+name = "yuku_chain_ic_connect"
+version = "0.0.1"
+edition = "2021"
+
+[lib]
+path = "src/lib.rs"
+crate-type = ["cdylib"]
+
+[dependencies]
+candid = "0.10"
+ic-cdk = "0.13"
+
+serde = { version = "1", features = ["derive"] }
+serde_json = "1.0.95"

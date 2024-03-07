@@ -1,0 +1,13 @@
+{
+    "canisters": {
+        "yuku_chain_ic_connect": {
+            "type": "custom",
+            "build": [
+                "cargo build --target wasm32-unknown-unknown --release",
+                "ic-wasm -o yuku_chain_ic_connect_opt.wasm target/wasm32-unknown-unknown/release/yuku_chain_ic_connect.wasm shrink"
+            ],
+            "wasm": "yuku_chain_ic_connect_opt.wasm",
+            "candid": "candid.did"
+        }
+    }
+}
