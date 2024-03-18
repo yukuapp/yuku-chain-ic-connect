@@ -53,6 +53,11 @@ async fn user_clean(random: u64, user: candid::Principal) {
 
 // ================== common ==================
 
+#[ic_cdk::query]
+pub fn wallet_balance() -> candid::Nat {
+    candid::Nat::from(ic_cdk::api::canister_balance128())
+}
+
 #[ic_cdk::update]
 async fn canister_status() -> ic_cdk::api::management_canister::main::CanisterStatusResponse {
     ic_cdk::api::management_canister::main::canister_status(

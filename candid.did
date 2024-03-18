@@ -27,5 +27,6 @@ service : {
   user_clean : (nat64, principal) -> ();
   user_query : (nat64) -> (opt principal) query;
   user_update : () -> (nat64);
+  wallet_balance : () -> (nat) query;
   whoami : () -> (principal) query;
 }
